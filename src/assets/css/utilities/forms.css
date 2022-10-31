@@ -1,0 +1,148 @@
+textarea {
+  resize: none !important;
+}
+
+.btn {
+  @apply inline-flex items-center leading-tight text-center px-5 py-2 focus:outline-none rounded-md text-white font-medium tracking-wide;
+
+  i {
+    @apply inline-block ml-1;
+  }
+
+  &[disabled] {
+    @apply opacity-70 cursor-not-allowed;
+  }
+
+  &-blue,
+  &-blue[type="reset"],
+  &-blue[type="button"],
+  &-blue[type="submit"] {
+    @apply bg-blue-600 text-white;
+
+    &:hover {
+      @apply hover:bg-blue-500;
+    }
+  }
+
+  &-red,
+  &-red[type="reset"],
+  &-red[type="button"],
+  &-red[type="submit"] {
+    @apply bg-red-600 text-white;
+
+    &:hover {
+      @apply hover:bg-red-500;
+    }
+  }
+
+  &-border {
+    &--red {
+      @apply bg-white border border-red-500 text-red-500;
+    }
+  }
+}
+
+.form {
+  &-control {
+    @apply w-full border-gray-200 rounded-md focus:border-indigo-600 focus:ring focus:ring-opacity-40 focus:ring-indigo-500;
+  }
+
+  &-group {
+    @apply mb-6;
+  }
+}
+
+.radio {
+  @apply inline-flex items-center cursor-pointer;
+
+  input {
+    &[type="radio"] {
+      @apply h-5 w-5 text-blue-500 inline-block align-middle rounded-full border border-gray-400 bg-white cursor-pointer;
+      appearance: none;
+      color-adjust: exact;
+      background-origin: border-box;
+      user-select: none;
+      flex-shrink: 0;
+
+      &.lila {
+        @apply text-[#A480FF];
+      }
+
+      &.verde {
+        @apply text-[#23DEB8];
+      }
+
+      &.coral {
+        @apply text-[#FF5757];
+      }
+
+      &.celeste {
+        @apply text-[#1ACFFF];
+      }
+
+      &:focus {
+        @apply outline-none;
+        box-shadow: 0 0 0 3px theme(colors.white);
+        border-color: #63b3ed;
+      }
+
+      &:checked {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='3'/%3E%3C/svg%3E");
+        border-color: transparent;
+        background-color: currentColor;
+        background-size: 100% 100%;
+        background-position: 50%;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  span {
+    @apply ml-2 text-gray-700;
+  }
+}
+
+.checkbox {
+  @apply inline-flex items-center cursor-pointer;
+
+  input {
+    &[type="checkbox"] {
+      @apply w-5 h-5 appearance-none inline-block align-middle box-border border border-gray-400 bg-white text-blue-500 rounded;
+      appearance: none;
+      color-adjust: exact;
+      background-origin: border-box;
+      user-select: none;
+      flex-shrink: 0;
+
+      &:focus {
+        @apply outline-none;
+        box-shadow: 0 0 0 3px theme(colors.white);
+        border-color: #63b3ed;
+      }
+
+      &:checked {
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4a1 1 0 00-1.414-1.414L7 8.586 5.707 7.293z'/%3E%3C/svg%3E");
+        @apply bg-transparent bg-no-repeat;
+        border-color: transparent;
+        background-color: currentColor;
+        background-size: 100% 100%;
+        background-position: 50%;
+      }
+    }
+  }
+
+  span {
+    @apply ml-2 text-gray-700;
+  }
+}
+
+.loading {
+  @apply absolute inset-0 bg-no-repeat bg-white bg-opacity-90 z-10 bg-center;
+  background-image: url("../../img/animation.png");
+}
+
+.label {
+  &-error {
+    @apply text-sm text-red-600 font-semibold;
+  }
+}
